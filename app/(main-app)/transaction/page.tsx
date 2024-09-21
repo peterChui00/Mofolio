@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Transaction',
+};
+
 export default function TransactionPage() {
   return (
     <div>

@@ -1,10 +1,19 @@
 import {
+  ArrowDown,
+  ArrowUp,
+  ArrowUpDown,
   ChartColumnIncreasing,
+  ChevronFirst,
+  ChevronLast,
+  ChevronLeft,
+  ChevronRight,
+  EyeOff,
   LayoutDashboard,
   LucideIcon,
   LucideProps,
   Menu,
   ReceiptText,
+  Settings2,
 } from 'lucide-react';
 
 export type Icon = LucideIcon;
@@ -15,6 +24,16 @@ export const Icons = {
   summary: ChartColumnIncreasing,
   transaction: ReceiptText,
   menu: Menu,
+  arrowUp: ArrowUp,
+  arrowDown: ArrowDown,
+  arrowUpDown: ArrowUpDown,
+  chevronLeft: ChevronLeft,
+  chevronRigth: ChevronRight,
+  chrvronFirst: ChevronFirst,
+  chrvronLast: ChevronLast,
+  eyeOff: EyeOff,
+  setting2: Settings2,
+
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

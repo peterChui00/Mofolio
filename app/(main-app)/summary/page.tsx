@@ -2,7 +2,6 @@ export const metadata = {
   title: 'Summary',
 };
 
-
 export default function SummaryPage() {
   return (
     <div>

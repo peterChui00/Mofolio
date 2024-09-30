@@ -12,8 +12,10 @@ import {
   LucideIcon,
   LucideProps,
   Menu,
+  Moon,
   ReceiptText,
   Settings2,
+  Sun,
 } from 'lucide-react';
 
 export type Icon = LucideIcon;
@@ -33,6 +35,8 @@ export const Icons = {
   chrvronLast: ChevronLast,
   eyeOff: EyeOff,
   setting2: Settings2,
+  sun: Sun,
+  moon: Moon,
 
   gitHub: ({ ...props }: LucideProps) => (
     <svg

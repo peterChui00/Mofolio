@@ -22,7 +22,7 @@ export default function Sidebar({ className }: SidebarProps) {
     <TooltipProvider>
       <aside
         className={cn(
-          `h-screen transition-all duration-300`,
+          `hidden h-screen transition-all duration-300 md:block`,
           isCollapsed ? 'w-20' : 'w-[20rem]',
           className
         )}

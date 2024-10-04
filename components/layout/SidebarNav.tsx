@@ -14,7 +14,7 @@ import { buttonVariants } from '../ui/Button';
 
 type Props = {
   items: NavItem[];
-  isCollapsed: boolean;
+  isCollapsed?: boolean;
 };
 
 export default function SidebarNav({ items, isCollapsed }: Props) {

@@ -1,3 +1,6 @@
+import ChartPortfolioValue from '@/components/charts/ChartPortfolioValue';
+import ChartPositionSize from '@/components/charts/ChartPositionSize';
+
 export const metadata = {
   title: 'Dashboard',
 };
@@ -5,9 +8,14 @@ export const metadata = {
 export default function DashboardPage() {
   return (
     <div>
-      <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        Dashboard
-      </h2>
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-12 md:col-span-9">
+          <ChartPortfolioValue />
+        </div>
+        <div className="col-span-12 md:col-span-3">
+          <ChartPositionSize />
+        </div>
+      </div>
     </div>
   );
 }

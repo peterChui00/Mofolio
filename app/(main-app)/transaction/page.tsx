@@ -15,13 +15,13 @@ export default async function TransactionPage() {
   const data = await getTableData();
 
   return (
-    <div>
+    <>
       <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
         Transaction
       </h2>
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto">
         <TransactionTable columns={columns} data={data} />
       </div>
-    </div>
+    </>
   );
 }

@@ -10,9 +10,9 @@ export default function MainAppLayout({
   return (
     <div className="flex">
       <Sidebar />
-      <main className="w-full flex-1">
+      <main className="flex h-dvh w-full flex-1 flex-col">
         <Header />
-        <PageContainer scrollable>{children}</PageContainer>
+        <PageContainer scrollable={true}>{children}</PageContainer>
       </main>
     </div>
   );

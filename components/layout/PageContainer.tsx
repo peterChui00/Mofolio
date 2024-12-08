@@ -6,7 +6,9 @@ type Props = {
 };
 
 export default function PageContainer({ children, scrollable }: Props) {
-  const Page = <div className="h-full p-4">{children}</div>;
+  const Page = (
+    <div className="flex h-full min-h-0 flex-1 flex-col p-4">{children}</div>
+  );
 
   if (scrollable) {
     return <ScrollArea className="h-dvh">{Page}</ScrollArea>;

@@ -29,7 +29,9 @@ export default function TransactionTable<TData, TValue>({
   columns,
   data,
 }: Props<TData, TValue>) {
-  const [sorting, setSorting] = useState<SortingState>([]);
+  const [sorting, setSorting] = useState<SortingState>([
+    { id: 'timestamp', desc: true },
+  ]);
   const table = useReactTable({
     columns,
     data,
@@ -87,7 +89,7 @@ export default function TransactionTable<TData, TValue>({
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  No results
+                  No transactions
                 </TableCell>
               </TableRow>
             )}

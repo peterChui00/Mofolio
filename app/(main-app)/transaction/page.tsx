@@ -1,5 +1,5 @@
-import { columns } from '@/components/tables/transaction/Columns';
-import TransactionTable from '@/components/tables/transaction/TransactionTable';
+import { TransactionStoreProvider } from '@/components/providers/TransactionStoreProvider';
+import TransactionTableContainer from '@/components/transaction/TransactionTableContainer';
 import { templateData } from '@/data/constants';
 import { Transaction } from '@/types';
 
@@ -12,16 +12,11 @@ export const metadata = {
 };
 
 export default async function TransactionPage() {
-  const data = await getTableData();
-
   return (
-    <>
-      <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        Transaction
-      </h2>
-      <div className="container mx-auto">
-        <TransactionTable columns={columns} data={data} />
+    <TransactionStoreProvider>
+      <div className="container mx-auto flex flex-col gap-4">
+        <TransactionTableContainer />
       </div>
-    </>
+    </TransactionStoreProvider>
   );
 }
